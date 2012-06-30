@@ -60,7 +60,7 @@ h1.title span{
 }
 .bf_menu ul{
 	display:block;
-	margin-top:30px;
+	margin-top:80px;
 	margin-bottom: 30px;
 }
 .bf_menu ul li{
@@ -361,6 +361,9 @@ transparent url(../images/bg_black.png) repeat top left;
 }
 
 .lang-switch {
+z-index: 1;
+top: 200px;
+position: absolute;
 padding: 30px 0 0 45px;
 }
 
