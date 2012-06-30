@@ -20,7 +20,7 @@ $(function() {
 		BGMap					= (function() {
 			var map,
 				$mapEl		= $('#map'),
-				address		= 'Fondamenta Beata Giuliana 4, Venezia',
+				address		= 'Goga Yachting Club, Serbia',
 				lat			= 45.428688849691014,
 				lng			= 12.317744493484497,
 				display		= false,
@@ -260,11 +260,11 @@ $(function() {
 					});
 				},
 				slider					= function(position) {
-					$bf_gallery_wrapper.show();
+					$bf_gallery_wrapper.delay(200).fadeIn();
 					
 					showNavigation();
 					
-					$bf_items.eq(position).show();
+					$bf_items.eq(position).delay(200).fadeIn();
 					
 					light(500, 0.8);
 					
@@ -299,8 +299,8 @@ $(function() {
 							paramDesc		= {};
 										
 							if(dir) {
-								paramHeading.left	= '-10px';
-								paramHeading.top	= '-10px';
+								paramHeading.left	= '0px';
+								paramHeading.top	= '0px';
 								paramDesc.right		= '0px';
 								paramDesc.bottom	= '0px';
 							} else {
@@ -344,17 +344,17 @@ $(function() {
 						var	startingLeft	= (dir) ? '480px' : '-520px',
 						currentEndingLeft	= (dir) ? '-520px' : '480px';
 								
-						$next_item.css('left', startingLeft).show();
+						$next_item.delay(2000).show();
 								
 						//4 step : animate current one to the left side, and next one to the center
-						$bf_item_current.stop().animate({
+						$bf_item_current.stop().fadeOut().animate({
 							left	: currentEndingLeft
 						}, animSpeed);
 						
-						$next_item.stop().animate({
+						$next_item.stop().fadeIn().animate({
 							left	: '-20px'
 						}, animSpeed, function() {
-							$bf_item_current.hide();
+							$bf_item_current.fadeOut();
 							$bf_gallery_wrapper.css('overflow', 'visible');
 							var $heading	= $next_item.children('.bf_heading'),
 								$desc		= $next_item.children('.bf_desc');
@@ -441,7 +441,7 @@ $(function() {
 						hidePageContent();
 						
 						var item	= $(this).data('content');
-						if(item === 'visit') {
+						if(item === 'kontakt') {
 							BGMap.showMap();
 						} else{
 							$.when( BGImageController.fadeBG(true) ).done(function(){
@@ -496,6 +496,8 @@ $(function() {
 				reset			: reset
 			};
 		})();
-
+//$bf_items.remove();
+//$bf_gallery_wrapper.remove();
+$bf_overlay.remove();
 	Template.init();
 });
