@@ -2,14 +2,14 @@
 @font-face
 {
 font-family: text;
-src: url('../fonts/ptn57f.ttf'),
-     url('../fonts/ptn57f.eot') format("opentype"); /* IE */
+src: url('../fonts/arpad-narou.ttf'),
+     url('../fonts/arpad-narou.eot') format("opentype"); /* IE */
 }
 @font-face
 {
 font-family: text;
-src: url('../fonts/ptn57f.ttf'),
-     url('../fonts/ptn57f.eot') format("opentype"); /* IE */
+src: url('../fonts/arpad-narou.ttf'),
+     url('../fonts/arpad-narou.eot') format("opentype"); /* IE */
      font-weight:bold;
 }
 
@@ -99,6 +99,20 @@ h1.title span{
 	margin-top:-25px;
 	opacity:1.0;
 }
+
+.bf_menu ul li a.current span{
+	color:#009bdf;
+	text-shadow:none;
+}
+
+.bf_menu ul li a.current span.bf_hover{
+	height:100%;
+	width:100%;
+	margin-top:-25px;
+	opacity:1.0;
+	color:#009bdf;
+}
+
 .bf_menu ul li a span{
 	position:relative;
 }

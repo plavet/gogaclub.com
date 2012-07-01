@@ -1,6 +1,6 @@
 $(function() {
 	var	$bf_page_menu			= $('#bf_page_menu'),
-		$bf_menu_items			= $bf_page_menu.find('a'),
+		$bf_menu_items			= $bf_page_menu.find('a.ext'),
 		$bf_page_menu2			= $('.lang-switch'),
 		$bf_container			= $('#bf_container'),
 		$bf_pages				= $bf_container.children('.bf_page'),
@@ -33,7 +33,7 @@ $(function() {
 					
 					var point 		= new google.maps.LatLng(lat,lng),
 						mapOptions 	= {
-							zoom						: 18,
+							zoom						: 17,
 							center						: point,
 							mapTypeId					: google.maps.MapTypeId.HYBRID,
 							mapTypeControl				: false,
