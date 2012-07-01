@@ -22,8 +22,8 @@ $(function() {
 			var map,
 				$mapEl		= $('#map'),
 				address		= 'Goga Yachting Club, Serbia',
-				lat			= 45.428688849691014,
-				lng			= 12.317744493484497,
+				lat			= 44.833946,
+				lng			= 20.419722,
 				display		= false,
 				
 				showMap		= function() {
@@ -33,7 +33,7 @@ $(function() {
 					
 					var point 		= new google.maps.LatLng(lat,lng),
 						mapOptions 	= {
-							zoom						: 18,
+							zoom						: 17,
 							center						: point,
 							mapTypeId					: google.maps.MapTypeId.HYBRID,
 							mapTypeControl				: false,
@@ -59,7 +59,7 @@ $(function() {
 					resizeMap();
 					
 					var coordInfoWindow = new google.maps.InfoWindow({maxWidth : 10}),   
-						latlngStr 		= address + "<br />LatLng: " + lat + " , " + lng + "<br />";
+						latlngStr 		= address + "<br /><br />Lat:" + lat + " , <br />" + "Lng: " + lng + " ,<br /> ";
 					
 					coordInfoWindow.setContent(latlngStr);    
 					coordInfoWindow.setPosition(point);    
@@ -181,7 +181,7 @@ $(function() {
 			var animated				= false,
 				animSpeed				= 700,
 				current					= 0,
-				defaultImage			= 'images/background/default.jpg',
+				defaultImage			= 'images/background/default.png',
 				
 				init					= function(position) {
 					initEventsHandler();
@@ -197,7 +197,7 @@ $(function() {
 				light					= function(speed, val, hide) {
 					$bf_overlay.stop().fadeTo(speed, val, function() {
 						if(hide)
-							$bf_overlay.hide();	
+							$bf_overlay.show();	
 					});
 				},
 				initEventsHandler		= function() {
@@ -471,7 +471,7 @@ $(function() {
 					
 				},
 				hidePageContent			= function() {
-					$bf_pages.hide();
+					$bf_pages.fadeOut(200);
 					BGSlider.stop();
 				},
 				initPhotoSlider			= function(position) {
