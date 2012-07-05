@@ -35,8 +35,8 @@ $(function() {
 						mapOptions 	= {
 							zoom						: 17,
 							center						: point,
-							mapTypeId					: google.maps.MapTypeId.HYBRID,
-							mapTypeControl				: false,
+							mapTypeId					: google.maps.MapTypeId.ROADMAP,
+							mapTypeControl				: true,
 							panControl					: true,
 							panControlOptions			: {
 								position	: google.maps.ControlPosition.TOP_RIGHT
@@ -54,7 +54,7 @@ $(function() {
 					
 					map 			= new google.maps.Map(document.getElementById("map"), mapOptions);
 					//rotate 45 degrees (nicer view!)
-					map.setTilt(45);
+					//map.setTilt(45);
 					
 					resizeMap();
 					
