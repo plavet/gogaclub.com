@@ -25,7 +25,7 @@ $(function() {
 				lat			= 44.833946,
 				lng			= 20.419722,
 				display		= false,
-
+				
 				showMap		= function() {
 					hideMap();
 					
@@ -87,7 +87,6 @@ $(function() {
 				active		: active,
 				resizeMap	: resizeMap
 			};
-
 		})(),
 		
 		BGImageController		= (function() {
