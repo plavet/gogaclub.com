@@ -20,7 +20,7 @@ body{
 	font-size:16px;
 }
 a{
-	color:#000;
+	color:#009BDF;
 	text-decoration:none;
 }
 .bf_background img{
@@ -134,8 +134,9 @@ h1.title span{
 	text-shadow:0px 0px 1px #fff;
 }
 .bf_content_text p{
+	text-align: justify;
 	padding:5px 20px;
-	font-size:17px;
+	font-size:14px;
 	font-family: text;
 	color:#fff;
 }
@@ -273,7 +274,7 @@ a.bf_close{
 	font-family: text;
 }
 .bf_footer a{
-	padding:5px 10px;
+	padding:6px 10px;
 	letter-spacing:1px;
 	text-shadow:1px 1px 1px #000;
 	color:#ddd;
@@ -376,9 +377,9 @@ transparent url(../images/bg_black.png) repeat top left;
 }
 
 .lang-switch {
-z-index: 1;
+z-index: 2;
 top: 200px;
-position: absolute;
+position: fixed;
 padding: 30px 0 0 45px;
 }
 
@@ -416,3 +417,6 @@ a.face {
 
 #map {background-color:transparent !important;}
 ul#slide-list {display:none;}
+
+#bf_page_menu{z-index:1;}
+.bf_content_text{z-index:1;}
