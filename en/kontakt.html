@@ -1,255 +1,495 @@
 <!DOCTYPE html>
+
 <html lang="sr-RS">
+
     <head>
+
         <title>Goga Yachting Club</title>
+
 		<meta charset="utf-8">
+
         <meta name="description" content="" />
+
         <meta name="keywords" content=""/>
 
+
+
 		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
+
         <link rel="stylesheet" type="text/css" href="css/style.css" />
+
 		<link rel="stylesheet" href="css/supersized.css" type="text/css" media="screen" />
+
 		<link rel="stylesheet" href="theme/supersized.shutter.css" type="text/css" media="screen" />
 
+
+
 		<script type="text/javascript" src="js/jquery-1.5.2.min.js"></script>
+
 		<script type="text/javascript" src="js/supersized.3.2.7.min.js"></script>
+
 		<script type="text/javascript" src="theme/supersized.shutter.js"></script>
+
 		<script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
+
 		<script type="text/javascript" src="js/gmap3.min.js"></script>
+
 		<script type="text/javascript">
+
+
 
 			jQuery(function($){
 
+
+
 				
+
+
 
 				$.supersized({
 
+
+
 				
+
+
 
 					// Functionality
 
+
+
 					slide_interval          :   5000,		// Length between transitions
+
+
 
 					transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
 
+
+
 					transition_speed		:	800,		// Speed of transition
+
+
 
 															   
 
+
+
 					// Components							
 
+
+
 					slide_links				:	'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
+
+
 
 					slides 					:  	[			// Slideshow Images
 
 
+
+
+
 														
 														{image : 'images/background/GOGA%20sa%20marine.jpg', title : 'GOGA sa marine', thumb : 'images/background/GOGA%20sa%20marine.jpg', url : '#'},
+
 														
+
 														{image : 'images/background/GOGA%20Ambijent.jpg', title : 'GOGA Ambijent', thumb : 'images/background/GOGA%20Ambijent.jpg', url : '#'},  
 
+
+
 														{image : 
+
 'images/background/GOGA%20Lignje.jpg', title : 'GOGA Lignje', thumb : 'images/background/GOGA%20Lignje.jpg', url : '#'},
 
+
+
 														{image : 
+
 'images/background/GOGA%20Ambijent%20nocu.jpg', title : 'GOGA Ambijent noću', thumb : 'images/background/GOGA%20Ambijent%20nocu.jpg', url : '#'},
 
+
+
 														{image : 
+
 'images/background/GOGA%20Marina.jpg', title : 'GOGA Marina', thumb : 'images/background/GOGA%20Marina.jpg', url : '#'},
 
+
+
 														{image : 
+
 'images/background/GOGA%20Proslave.jpg', title : 'GOGA Proslave', thumb : 'images/background/GOGA%20Proslave.jpg', url : '#'},
 
+
+
 														{image : 
+
 'images/background/GOGA%20Night.jpg', title : 'GOGA Night', thumb : 'images/background/GOGA%20Night.jpg', url : '#'},
 
+
+
 														{image : 
+
 'images/background/GOGA%20Monterey%20sufle.jpg', title : 'GOGA Monterey sufle', thumb : 'images/background/GOGA%20Monterey%20sufle.jpg', url : '#'},
 
-														{image : 
-'images/background/GOGA%20Brod.jpg', title : 'GOGA Brod', thumb : 'images/background/GOGA%20Brod.jpg', url : '#'},
+
 
 														{image : 
+
+'images/background/GOGA%20Brod.jpg', title : 'GOGA Brod', thumb : 'images/background/GOGA%20Brod.jpg', url : '#'},
+
+
+
+														{image : 
+
 'images/background/GOGA%20Night%20life.jpg', title : 'GOGA Night life', thumb : 'images/background/GOGA%20Night%20life.jpg', url : '#'},
+
+
 
 												]
 
+
+
 					
+
+
 
 				});
 
+
+
 		    });
+
 		    
+
 		</script>
+
 		<script type="text/javascript">
+
 $(function(){ 
+
  
+
 $().gmap3(
+
 'setDefault',
+
 { unit:'km',
+
 init:{
+
 mapTypeId : google.maps.MapTypeId.HYBRID,
+
 center:[44.83409396867651,20.417007207870483],
+
 zoom:17,
+
 }
+
 }
+
 );
 
+
+
 $("#map2").gmap3(
+
 {
+
 action: 'setOptions', args:[{
+
 scrollwheel:true,
+
 disableDefaultUI:false,
+
 disableDoubleClickZoom:false,
+
 draggable:true,
+
 mapTypeControl: true,
+
 panControl:true,
+
 panControlOptions			: {
+
 	position	: google.maps.ControlPosition.TOP_RIGHT
+
 							},
+
 rotateControl:false,
+
 scaleControl:false,
+
 streetViewControl:true,
+
 streetViewControlOptions: {        position: google.maps.ControlPosition.TOP_RIGHT    },
+
 zoomControl:true,
+
 zoomControlOptions			: {
+
 	style		: google.maps.ZoomControlStyle.MEDIUM,
+
 	position	: google.maps.ControlPosition.TOP_RIGHT
+
 							}
+
 }]
 
+
+
 });
+
+
 
 $("#map2").gmap3(
 
+
+
 { action: 'addMarkers',
+
     markers:[
+
       {lat:44.83388473817061,lng:20.421288013458252, data:'<span>Marina Goga Yachting Club</span>'},
+
       {lat:44.83391517174595,lng:20.420451164245605, data:'<span style="font-size:20px;color:#009bdf;">Goga Yachting Club</span><br>Elitni restoran na vodi'},
+
       {lat:44.83408445821544,lng:20.416980385780334, data:'Parking na ulici'},
+
       {lat:44.83426135253427,lng:20.41662633419037, data:'Parking na ulici'},
+
       {lat:44.83446107127391, lng:20.417157411575317, data:'Besplatan parking'}
+
     ],
+
     marker:{
+
       options:{
+
         draggable: false
+
       },
+
       events:{
+
         mouseover: function(marker, event, data){
+
           var map = $(this).gmap3('get'),
+
               infowindow = $(this).gmap3({action:'get', name:'infowindow'});
 
+
+
           if (infowindow){
+
             infowindow.open(map, marker);
+
             infowindow.setContent(data);
+
           } else {
+
             $(this).gmap3({action:'addinfowindow', anchor:marker, options:{content: data}});
+
           }
+
         }
+
         //mouseout: function(){
+
         //  var infowindow = $(this).gmap3({action:'get', name:'infowindow'});
+
         //  if (infowindow){
+
         //    infowindow.close();
+
         //  }
+
         //}
+
       }
+
     }
+
   }
+
+
 
 );
 
+
+
 });
+
 		</script>
+
     </head>
+
 <body>
+
 		<!--<div id="map"></div>-->
+
 		<div id="map2" style="width:100%;height:100%;background-color:#E5E3DF;z-index:1;"></div>
+
 		<div id="bf_container" class="bf_container">
 
+
+
 			<div id="bf_background" class="bf_background">
+
 				<img src="images/background/default.png" alt="image1" style="display:none;"/>
+
 				<div class="bf_overlay"></div>
+
 			</div>
 
+
+
 				<div class="lang-switch">
-				<a class="current" href="#" title="srpski">srpski </a> <span class="separator"> / </span> <a href="http://kilmulis.com/TEST/gogayc/en/" title="english">english</a>
+
+				<a href="http://kilmulis.com/TEST/gogayc/" title="srpski">srpski </a> <span class="separator"> / </span> <a class="current" href="#" title="english">english</a>
+
 				</div>
+
 			
+
 			<div id="bf_page_menu" class="bf_menu" >
+
+
 
 				<img class="title" src="images/logo.png" alt="Goga Yachting Club" />
 
+
+
 				
+
+
 
 				<ul>
 
-					<li><a href="index.html" data-content="aktuelno"><span class="bf_hover"></span><span>Aktuelno</span></a></li>
 
-					<li><a href="jelovnik.html" data-content="jelovnik"><span class="bf_hover"></span><span>Jelovnik</span></a></li>
 
-					<li><a href="pica.html" data-content="pica"><span class="bf_hover"></span><span>Pića</span></a></li>
+					<li><a href="index.html" data-content="aktuelno"><span class="bf_hover"></span><span>Summer offering</span></a></li>
 
-					<li><a href="proslave.html" data-content="proslave"><span class="bf_hover"></span><span>Proslave</span></a></li>
 
-					<li><a href="onama.html" data-content="onama"><span class="bf_hover"></span><span>O nama</span></a></li>
 
-					<li><a class="ext current" href="#" data-content="kontakt"><span class="bf_hover"></span><span>Kontakt</span></a></li>					
+					<li><a href="jelovnik.html" data-content="jelovnik"><span class="bf_hover"></span><span>Foods</span></a></li>
+
+
+
+					<li><a href="pica.html" data-content="pica"><span class="bf_hover"></span><span>Drinks</span></a></li>
+
+
+
+					<li><a href="proslave.html" data-content="proslave"><span class="bf_hover"></span><span>Events</span></a></li>
+
+
+
+					<li><a href="onama.html" data-content="onama"><span class="bf_hover"></span><span>About us</span></a></li>
+
+
+
+					<li><a class="ext current" href="#" data-content="kontakt"><span class="bf_hover"></span><span>Contact</span></a></li>					
+
+
 
 				</ul>
 
+
+
 				<a class="face" target="_blank" href="http://www.facebook.com/pages/Yachting-Club-Goga/444562198891926" title="Facebook">facebook</a>
+
+
 
 			</div>
 
+
+
 			
+
 			<div class="bf_page" id="kontakt" style="display:block !important;">
+
+
 
 				<div class="bf_content_text">
 
-					<h2>Adresa:</h2>
+
+
+					<h2>Address:</h2>
+
+
 
 					<p>Zemunski Kej bb<br>
- (ugao Džona Kenedija i bulevara Nikole Tesle)</p>
+
+ (corner of Džona Kenedija str. & Nikola Tesla boul.)</p>
+
  
- 					<h2>Rezervacije:</h2>
+
+ 					<h2>Reservation:</h2>
+
+
 
 					<p>+381 63 573 651<br>
+
  +381 63 573 652</p>
- 					<p><a class="" href="mailto:gogaclub@nautica.rs">gogaclub@nautica.rs</a></p>
+
+ 					<p><a class="" href="mailto:gogaclub@nautica.rs" target="_blank">gogaclub@nautica.rs</a></p>
+
+					<p>OPEN: 11-01h</p>
+
+
 
 				</div>
 
+
+
 			</div>				
 
+
+
 		</div>
+
+
+
 
 
     	<div class="bf_footer">
+
 	<!--Control Bar-->
+
 	<div id="controls-wrapper" class="load-item">
+
 		<div id="controls">
+
 			<a class="bf_left" href="http://www.gogaclub.com/">All content by <span>GOGA YACHTING CLUB 2012.</span></a>
-			<a href="http://kilmulis.com">desing by KILMULIS design</a>
+
+			<a href="http://www.kilmulis.com" target="_blank">desing by KILMULIS design</a>
+
 		</div>
+
 	</div>
+
 	</div>
+
 		<!-- The JavaScript -->
+
 		<!-- the mousewheel plugin - optional to provide mousewheel support -->
+
 		<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+
 		<script type="text/javascript" src="js/jquery.template.js"></script>
 
-		<script type="text/javascript">
+<script type="text/javascript">
  
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-22952332-19']);
-		  _gaq.push(['_trackPageview']);
-		 
-		  (function() {
-		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();
-		 
-		</script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22952332-19']);
+  _gaq.push(['_trackPageview']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ 
+</script>
     </body>
+
 </html>
