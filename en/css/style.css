@@ -23,6 +23,9 @@ a{
 	color:#009BDF;
 	text-decoration:none;
 }
+a:focus {
+	outline: none;
+}
 .bf_background img{
 	position:fixed;
 	top:0px;
@@ -420,4 +423,4 @@ ul#slide-list {display:none;}
 
 #bf_page_menu{z-index:1;}
 .bf_content_text{z-index:1;}
-a.download-link {padding: 20px 0 0 8px;}
+a.download-link {padding:20px 0 0 8px;}

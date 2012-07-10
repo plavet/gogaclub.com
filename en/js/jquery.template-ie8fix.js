@@ -383,11 +383,12 @@ $(function() {
 						left	: starting_left,
 						top		: dim.top + 'px'
 					});
+
 					//ie8fix
 					$bg_image.parent().append($next_item_bgimage);
 					$next_item_bgimage.stop().animate({
 					left: dim.left }, animSpeed);
-
+							
 					var ending_left			= (dir) ? -$bg_image.width() : $(window).width();
 							
 					$bg_image.stop().animate({
@@ -397,7 +398,6 @@ $(function() {
 						$bg_image 	= $next_item_bgimage;
 						animated 	= false;
 					});
-
 				},
 				replaceBGImage			= function(image) {
 					var $next_bgimage	= $('<img src="' + image + '" alt="image' + (current + 1) + '" ></img>'),
