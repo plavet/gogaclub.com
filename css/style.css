@@ -23,6 +23,9 @@ a{
 	color:#009BDF;
 	text-decoration:none;
 }
+a:focus {
+	outline: none;
+}
 .bf_background img{
 	position:fixed;
 	top:0px;
